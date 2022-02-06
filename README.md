@@ -1,6 +1,6 @@
 # Helping Hands
 
-Hackathon project for Trojan Hacks 2021
+Hackathon project for TrojanHacks 2021 [[Demo Link](https://www.youtube.com/watch?v=03YToHQQ6uI)]
 
 ## Inspiration
 
@@ -43,6 +43,11 @@ We learned how to work in a team, popping up new ideas, quick decision making an
 
 Scaling the system to an international level, payment service integration, engageSociety programs, real-time shelter space availability feature as well as expanding our customer base from low-income/homeless to people affected in other ways.
 
-## Demo Link
-[Helping Hands](https://www.youtube.com/watch?v=MTPY8MwoowE)
+## Screenshots
+
+![1](./screenshots/hh_sc2.png)
+![1](./screenshots/hh_sc3.png)
+![1](./screenshots/hh_sc4.png)
+![1](./screenshots/hh_sc5.png)
+![1](./screenshots/hh_sc1.jpeg)
 

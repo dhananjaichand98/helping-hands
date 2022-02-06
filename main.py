@@ -14,7 +14,7 @@ app.secret_key = 'my secret and not your secret'
 # def about():
 #     return render_template("about.html")
 
-db = pymysql.connect(host="sql3.freemysqlhosting.net", user="sql3450941", password="I1TIEzd82P", database="sql3450941")
+db = pymysql.connect(host="sql3.freemysqlhosting.net", user="sql3470758", password="B5GuikRDDs", database="sql3470758")
 account_sid = 'ACe656e62dfa83c630b54d7c877ac48100'
 auth_token = 'xxx'  #change to correct token here
 client = Client(account_sid, auth_token)
@@ -74,13 +74,14 @@ def login():
 
 @app.route('/dashboard', methods=['POST', 'GET'])
 def dashboard():
-    cursor = db.cursor()
-    sql = "Select * from Zipcodes limit 3;"
-    cursor.execute(sql)
-    results = cursor.fetchall()
+    print("IN DASHBOARD")
+    # cursor = db.cursor()
+    # sql = "Select * from Zipcodes limit 3;"
+    # cursor.execute(sql)
+    # results = cursor.fetchall()
     # return toJson(results)
     count = 41290
-    return render_template('dashboard.html',result = results, count = count)
+    return render_template('dashboard.html',result = {}, count = count)
 
 
 @app.route('/profile', methods=['POST', 'GET'])
@@ -114,15 +115,15 @@ def addEvent():
     # date = request.args.get('event_date')
     # venue = request.args.get('event_venue')
     # Numbers from db in the same zipcode
-    numbers_to_message = ['+12028094943']
-    app.logger.warning("name=", name)
-    for number in numbers_to_message:
-        message = client.messages \
-            .create(
-            body='Event ' + str(name) + ' near You. Please reply Yes to confirm. Otherwise ignore.',
-            from_='+14158911938',
-            to=number
-        )
+    # numbers_to_message = ['+12028094943']
+    # app.logger.warning("name=", name)
+    # for number in numbers_to_message:
+    #     message = client.messages \
+    #         .create(
+    #         body='Event ' + str(name) + ' near You. Please reply Yes to confirm. Otherwise ignore.',
+    #         from_='+14158911938',
+    #         to=number
+    #     )
 
     #     # print(message.sid)
     #     # return message.status
@@ -158,13 +159,13 @@ def authorityAccess():
     username = request.args.get('email')
     password = request.args.get('pass')
     validation(username, password)  #chcek if username and password exists in DB
-    cursor = db.cursor()
-    sql = "Select * from Zipcodes limit 3;"
-    cursor.execute(sql)
-    results = cursor.fetchall()
+    # cursor = db.cursor()
+    # sql = "Select * from Zipcodes limit 3;"
+    # cursor.execute(sql)
+    # results = cursor.fetchall()
     # return toJson(results)
     count = 41290
-    return render_template('dashboardAuthority.html', result = results, count = count )
+    return render_template('dashboardAuthority.html', result = {}, count = count )
 
 @app.route('/donated', methods=['POST', 'GET'])
 def donated():

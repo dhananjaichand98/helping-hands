@@ -612,10 +612,14 @@
       });
     </script>
 
-
     <script>
-      var values = JSON.parse('{{result|tojson}}');
-      console.log(values);
+      var values = {
+        'city1': [0, 0, 0, 1700, 34.06842217402775, -118.36151149024859],
+        'city2': [0, 0, 0, 2000, 34.02740062940116, -118.2838394088855],
+
+      }
+      // JSON.parse('{{result|tojson}}');
+      // console.log(values);
       const citymap = {
         museum: {
           center: {
@@ -666,8 +670,6 @@
         // 	strokeColor: '#ff3333',
         // 	strokeWeight: 4
         // }
-
-
 
         /**
          * Checking dor data from the database.	
@@ -770,22 +772,6 @@
               infowindow.setContent(contentString3);
           })
         };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // for (const city in citymap) {
         // 	var contentString = '<div id="content"> ' +

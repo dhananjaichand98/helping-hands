@@ -609,8 +609,14 @@
 
 
 <script>
-	var values = JSON.parse('{{result|tojson}}');
-	console.log(values);
+	var values = {
+        'city1': [0, 0, 0, 700, 34.06842217402775, -118.36151149024859],
+        'city2': [0, 0, 0, 1400, 34.02740062940116, -118.2838394088855],
+		'city3': [0, 0, 0, 1500, 34.01740062940116, -118.4838394088855],
+		'city4': [0, 0, 0, 2000, 33.95740062940116, -118.2838394088855],
+      }
+	// JSON.parse('{{result|tojson}}');
+	// console.log(values);
 	const citymap = {
 		museum: {
 			center: { lat: 34.06842217402775 , lng: -118.36151149024859 },
